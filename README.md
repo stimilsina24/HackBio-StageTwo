@@ -1,4 +1,5 @@
-  <h1>Reproducing a Core Single-Cell RNA-Seq Analysis Pipeline Using Scanpy</h1>
+<div align = 'center'> 
+ <h1>Reproducing a Core Single-Cell RNA-Seq Analysis Pipeline Using Scanpy</h1>
 </div>
 
 ---
@@ -16,11 +17,11 @@ The standard Scanpy pipeline executed using a Jupyter notebook involved the foll
 1.  **Install and import necessary libraries:** (Scanpy, anndata, Decoupler, Pandas)
 2.  **Data import and formatting**
 3.  **Quality Control (QC):**
-    * Assess percent Mitochondrial genes ($\text{%MT}$), percent Ribosomal genes ($\text{%RB}$), and percent Hemoglobin genes ($\text{%HB}$).
+    * Assess percent Mitochondrial genes (%MT), percent Ribosomal genes (%RB), and percent Hemoglobin genes (%HB).
     * Check gene counts per cell and total counts.
 4.  **Filtering out low-quality cells:**
-    * Filtering criteria: stressed/irrelevant cells ($\text{%MT} < 5$, $\text{%RB} < 10$, and $\text{%HB} < 5$).
-    * Filtering criteria: empty wells or doublets (gene counts $> 200$ per cell and cell count $> 20$ per gene).
+    * Filtering criteria: stressed/irrelevant cells (%MT < 5, %RB < 10, and %HB < 5).
+    * Filtering criteria: empty wells or doublets (gene counts > 200 per cell and cell count > 20 per gene).
 5.  **Finding Highly Variable Features**
 6.  **Dimensionality Reduction:** using Principal Component Analysis (PCA)
 7.  **UMAP and Leiden Clustering**
@@ -67,3 +68,6 @@ It was surprising to see many of the genes **overlapping** between a lot, but no
 | **scipy** | 1.15.2 | py310h1d65ade\_0 (conda-forge) |
 | **pandas** | 2.3.3 | py310h0158d43\_1 (conda-forge) |
 | **seaborn** | 0.13.2 | hd8ed1ab\_3 (conda-forge) |
+
+
+###*The full library composition can be found in the scanpy_env.yml file*
