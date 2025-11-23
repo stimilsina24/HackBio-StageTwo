@@ -21,7 +21,7 @@ The standard Scanpy pipeline executed using a Jupyter notebook involved the foll
     * Check gene counts per cell and total counts.
 4.  **Filtering out low-quality cells:**
     * Filtering criteria: stressed/irrelevant cells (%MT < 5, %RB < 10, and %HB < 5).
-    * Filtering criteria: empty wells or doublets (gene counts > 200 per cell and cell count > 20 per gene).
+    * Filtering criteria: empty wells or doublets (gene counts > 200 per cell and cell count > 20 per gene, scrublet).
 5.  **Finding Highly Variable Features**
 6.  **Dimensionality Reduction:** using Principal Component Analysis (PCA)
 7.  **UMAP and Leiden Clustering**
