@@ -1,2 +1,7 @@
-#Ignore .h5ad files
+# Ignore data files
 *.h5ad
+bone_marrow.h5ad
+
+# Ignore R/Python temp files
+.Rhistory
+.ipynb_checkpoints/
