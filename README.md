@@ -19,21 +19,34 @@ The standard Scanpy pipeline executed using a Jupyter notebook involved the foll
 3.  **Quality Control (QC):**
     * Assess percent Mitochondrial genes (%MT), percent Ribosomal genes (%RB), and percent Hemoglobin genes (%HB).
     * Check gene counts per cell and total counts.
+    ![QC_unfilt](figures/violin_qc_unfilt.png)
+    *Fig.1: Quality control check(unfiltered cells)* 
 4.  **Filtering out low-quality cells:**
     * Filtering criteria: stressed/irrelevant cells (%MT < 5, %RB < 10, and %HB < 5).
+    ![QC_filt](figures/violin_qc_filt.png)
+    *Fig.2: Quality control check(after filtering)*
     * Filtering criteria: empty wells or doublets (gene counts > 200 per cell and cell count > 20 per gene, scrublet).
 5.  **Finding Highly Variable Features**
+    ![HVG](figures/filter_genes_dispersion_HVG.png)
+    *Fig.3: Highly Variable Features*
 6.  **Dimensionality Reduction:** using Principal Component Analysis (PCA)
-7.  **UMAP and Leiden Clustering**
+<img src="figures/pca_variance_ratio_PCA.png" style="width: 60%; height: auto;" alt="PCA_var"> <br>
+*Fig.4: PC vs Variance ratio*
+7.  **UMAP and Leiden Clustering**<br>
+<img src="figures/umap_clustering.png" style="width: 60%; height: auto;" alt="UMAP_clustering"> <br>
+*Fig.5: UMAP clustering*
 8.  **Cell Annotation:** using **Decoupler** and **PanglaoDB**.
     * Use the top-scoring cell type per cluster for annotation.
-9.  **Visualization:** (heatmap, dotplot, violin plot)
+9.  **Verification of cell annotation with gene marker list:** (heatmap, dotplot, violin plot)
+![UMAP_annot](figures/dotplot_annotated_dot.png)<br>
+*Fig.6: Dotplot of annotated UMAP clusters with markers*
 
 ---
 
 ## 🔬 Findings
-
-Several populations of blood cells were identified in the dataset:
+<img src="figures/umap_annotated.png" style="width: 60%; height: auto;" alt="UMAP_annot"> <br>
+*Fig.7: UMAP of annotated cells*<br><br>
+**Several populations of blood cells were identified in the dataset(See Fig.7 above):**
 
 * **Neutrophils:** **Innate immune cells** that are usually the first line of defense against infection, functioning through **phagocytosis** or extracellular traps.
 * **$\gamma\delta$ T cells:** An alternative type of T lymphocyte that **bridges innate and adaptive immunity** to help fight infections or cancer.
